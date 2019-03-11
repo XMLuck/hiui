@@ -53,7 +53,7 @@ describe('Table', () => {
 
   it('sort', () => {
     let sorterColumns = [...columns]
-    sorterColumns[1].sorter = function() {
+    sorterColumns[1].sorter = function(pre, next) {
       return pre.age - next.age
     }
     wrapper = mount(
@@ -63,7 +63,7 @@ describe('Table', () => {
       />
     )
     expect(wrapper.find('table tbody tr').at(random).find('td').at(0).text()).toEqual(data[random].name)
-    wrapper.find('table thead tr th').at(1).find('div span').at(1).simulate('click')
+    wrapper.find('table thead tr th').at(1).find('div span i').at(1).simulate('click')
     expect(wrapper.find('table tbody tr').at(random).find('td').at(0).text()).toEqual(data[9-random].name)
   })
 })
