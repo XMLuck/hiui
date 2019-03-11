@@ -94,7 +94,7 @@ class ItemDropdown extends Component {
                         onChoose(item, e)
                       })
                     }}
-                    key={index}
+                    key={item.tabKey}
                   >
                     {item.tabName}
                   </div>

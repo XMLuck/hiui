@@ -174,8 +174,7 @@ constructor(props) {
       },
       {
         tabName: '团购订单',
-        tabKey: 'tabKey-2',
-        closable: false
+        tabKey: 'tabKey-2'
       },
       {
         tabName: '以旧换新订单',
@@ -231,7 +230,6 @@ constructor(props) {
       {
         tabName: '团购订单',
         tabKey: 'tabKey-2',
-        closable: false,
         tabDesc: '关于标签的描述信息'
       },
       {

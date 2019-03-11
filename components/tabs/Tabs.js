@@ -183,7 +183,7 @@ class Tabs extends Component {
               return (
                 <ToolNav
                   className={itemClasses}
-                  key={`${prefixCls}__item-${index}`}
+                  key={`${prefixCls}__item-${tabKey}`}
                   onClick={e => this.handleClick(item, e)}
                   title={tabName}
                 >
@@ -211,7 +211,6 @@ class Tabs extends Component {
                   active={activeTabInHiddenItems}
                   items={hiddenTabItems}
                   onChoose={(item, e) => {
-                    console.log(item)
                     this.handleClick(item, e)
                   }}
                 />
